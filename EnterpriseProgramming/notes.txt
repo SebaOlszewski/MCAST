@@ -1,0 +1,4 @@
+.net framework 6.0
+try to recreate the presentation layer. Just try things out
+
+https://getbootstrap.com/
