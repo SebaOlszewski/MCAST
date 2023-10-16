@@ -2,3 +2,6 @@
 try to recreate the presentation layer. Just try things out
 
 https://getbootstrap.com/
+
+add-migration "FirstMigration" -context ShoppingCartContext
+update-database

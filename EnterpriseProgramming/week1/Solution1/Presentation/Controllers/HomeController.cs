@@ -28,13 +28,13 @@ namespace Presentation.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        //note : IActionResult is a base calss from whitch all type of result-classes inherit from 
-        //      e.g ViewResult, FileResult, JsonResult, ...
 
+        //note: IActionResult is a base class from which all type of result-classes inherit from
+        //      e.g ViewResult, FileResult, JsonResult, ....
         public IActionResult Test()
         {
-            //note: by default, MVC will load the View bearing the same name as the action
-            //      if you want to load a different view then you have to specity the name of the View
+            //note: by default, MVC will load the View bearing the same name as the Action
+            //      if you want to load a differnt view then you have to specify the name of the View
             return View();
         }
     }
