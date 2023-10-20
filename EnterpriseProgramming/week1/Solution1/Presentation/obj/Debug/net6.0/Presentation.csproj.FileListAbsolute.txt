@@ -517,3 +517,7 @@ C:\Users\Sebastian\Desktop\MCAST\EnterpriseProgramming\week1\Solution1\Presentat
 C:\Users\Sebastian\Desktop\MCAST\EnterpriseProgramming\week1\Solution1\Presentation\obj\Debug\net6.0\Presentation.pdb
 C:\Users\Sebastian\Desktop\MCAST\EnterpriseProgramming\week1\Solution1\Presentation\obj\Debug\net6.0\Presentation.genruntimeconfig.cache
 C:\Users\Sebastian\Desktop\MCAST\EnterpriseProgramming\week1\Solution1\Presentation\obj\Debug\net6.0\ref\Presentation.dll
+C:\Users\Sebastian\Documents\git\MCAST\EnterpriseProgramming\week1\Solution1\Presentation\bin\Debug\net6.0\DataAccess.dll
+C:\Users\Sebastian\Documents\git\MCAST\EnterpriseProgramming\week1\Solution1\Presentation\bin\Debug\net6.0\Domain.dll
+C:\Users\Sebastian\Documents\git\MCAST\EnterpriseProgramming\week1\Solution1\Presentation\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\Sebastian\Documents\git\MCAST\EnterpriseProgramming\week1\Solution1\Presentation\bin\Debug\net6.0\Domain.pdb

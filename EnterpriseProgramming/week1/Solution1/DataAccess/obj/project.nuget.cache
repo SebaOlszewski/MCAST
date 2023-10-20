@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XXe454WqGPBnMfviSYdABCQQqJodzXq035IFng3e85mQ3pMjkuMZolFyIJgaehONSizfBtvdJ8sjE/ANa3BcOw==",
+  "dgSpecHash": "N5TeVnFlnAlgI4ypHyZu7BT+rUj6sg1OV7ErkRQE0r0nmK1zE53bIMOtSGZLq90xQJXJwjyJ+GqbGiP8+VBf+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sebastian\\Desktop\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\Sebastian\\Documents\\git\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sebastian\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Sebastian\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.22\\microsoft.aspnetcore.cryptography.internal.6.0.22.nupkg.sha512",

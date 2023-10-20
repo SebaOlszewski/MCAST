@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vfye3kX7dB4D9f9v38SosuUb2l7T4rr5+SEmGJolq722hcagU5XLvBby3GB5KfgRdtlhr1WQfWeDLdvi3dli0Q==",
+  "dgSpecHash": "llVXTAxtLEMCGKu80FeIHJxt+mdVjoIcXhZjSHxw0r6xK53zRpL73s+RqzpCEeIySDM/RWOoFsnr/a58Bs3GFw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sebastian\\Desktop\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\Presentation\\Presentation.csproj",
+  "projectFilePath": "C:\\Users\\Sebastian\\Documents\\git\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\Presentation\\Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sebastian\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Sebastian\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -11181,11 +11181,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sebastian\\Desktop\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\Presentation\\Presentation.csproj",
+      "projectUniqueName": "C:\\Users\\Sebastian\\Documents\\git\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\Presentation\\Presentation.csproj",
       "projectName": "Presentation",
-      "projectPath": "C:\\Users\\Sebastian\\Desktop\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\Presentation\\Presentation.csproj",
+      "projectPath": "C:\\Users\\Sebastian\\Documents\\git\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\Presentation\\Presentation.csproj",
       "packagesPath": "C:\\Users\\Sebastian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sebastian\\Desktop\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\Presentation\\obj\\",
+      "outputPath": "C:\\Users\\Sebastian\\Documents\\git\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\Presentation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -11206,11 +11206,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Sebastian\\Desktop\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Sebastian\\Desktop\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\Sebastian\\Documents\\git\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Sebastian\\Documents\\git\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\Sebastian\\Desktop\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Sebastian\\Desktop\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\Domain\\Domain.csproj"
+            "C:\\Users\\Sebastian\\Documents\\git\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Sebastian\\Documents\\git\\MCAST\\EnterpriseProgramming\\week1\\Solution1\\Domain\\Domain.csproj"
             }
           }
         }
