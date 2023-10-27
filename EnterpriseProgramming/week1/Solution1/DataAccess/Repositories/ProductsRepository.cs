@@ -44,12 +44,22 @@ namespace DataAccess.Repositories
             return _shoppingCartContext.Products.SingleOrDefault(x => x.Id==id);
         }
 
-        /*public void AddProduct(Product product)
-        {
-            ShoppingCartContext sh = new ShoppingCartContext();
-            sh.Add(product);
+
+        public void AddProduct(Product product)
+        { 
+            
+            _shoppingCartContext.Products.Add(product);
+            _shoppingCartContext.SaveChanges(); //this commits to the database
         }
-         */
+
+
+        public void UpdateProduct(Product product)
+        {
+        
+        }
+
+        public void DeleteProduct(Guid id) { }
+               
 
     }
 }

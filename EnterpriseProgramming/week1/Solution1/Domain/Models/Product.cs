@@ -35,5 +35,9 @@ namespace Domain.Models
         public int CategoryFK { get; set; } //foreign key property
         public Category Category { get; set; } //navigational property
 
+
+        public double WholesalePrice { get; set; }
+
+        public string? Supplier { get; set; }
     }
 }
