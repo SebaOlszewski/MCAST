@@ -1,5 +1,6 @@
 ﻿using DataAccess.DataContext;
 using Domain.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,58 +9,61 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Repositories
 {
-    //Dependency Injection - design pattern that manages the creation of instances 
+    //Dependency Injection - design pattern that manages the creation of instances
+
     public class ProductsRepository
     {
+
         private ShoppingCartContext _shoppingCartContext;
 
         //constructor
-        public ProductsRepository(ShoppingCartContext shoppingCartContext)
-        {
-            _shoppingCartContext = shoppingCartContext;
+        public ProductsRepository(ShoppingCartContext shoppingCartContext ) {
+            _shoppingCartContext= shoppingCartContext;  
         }
 
+        
 
+        //What is the difference between IQueryable and List
+        //1. (drawback) in IQueryable you cannot debug it while in the List you can
+        //2. (advantage) IQueryable never opens a call to the database until you convert it into a List
 
-        //what is the difference between IQueryable and List
-        //1. (Drawback) in IQueryrable you cannot debuug. You can do that in the List
-        //2. (Advantage) IQueryable never opens a call to the database until you convert ir into a List
-
-        /*  
-            Example
-         
-            GetProducts().Where(x=>x.Name.Containst(variable).Skip(5).Take(10).OrderBy(x=>.Name);
-            myCommand.ToList();//
-            IQueryable is more efficient than he list, the list would connecto to the SQL server multiple times,
-            IQUeryable will do it less times
-        */
+        /* Example:
+         * 
+         * var myCommand = GetProducts().Where(x=>x.Name.Contains(variable).Skip(10).Take(10).OrderBy(x=>x.Name);
+         * myCommand.ToList();// <<<<
+         */
         //methods
         public IQueryable<Product> GetProducts()
-        { 
-            return _shoppingCartContext.Products; //the list of products is not retrieved until you call ToList()
+        {
+           return _shoppingCartContext.Products; 
+            //the list of products is not retrieved not until you call ToList()
         }
 
-        public Product? GetProduct(Guid id)
-        {
+        public Product? GetProduct(Guid id) {
             return _shoppingCartContext.Products.SingleOrDefault(x => x.Id==id);
         }
 
-
-        public void AddProduct(Product product)
-        { 
-            
+        public void AddProduct(Product product) {
             _shoppingCartContext.Products.Add(product);
             _shoppingCartContext.SaveChanges(); //this commits to the database
         }
 
-
         public void UpdateProduct(Product product)
         {
-        
+
         }
 
-        public void DeleteProduct(Guid id) { }
-               
-
+        public void DeleteProduct(Guid id) {
+            var productToDelete = GetProduct(id);
+            if(productToDelete!=null) {
+                _shoppingCartContext.Products.Remove(productToDelete);
+                _shoppingCartContext.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("No product to delete");
+            }
+        
+        }
     }
 }

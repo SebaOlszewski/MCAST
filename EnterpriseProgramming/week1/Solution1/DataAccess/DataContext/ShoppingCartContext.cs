@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DataAccess.DataContext
 {
@@ -26,6 +27,7 @@ namespace DataAccess.DataContext
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -36,7 +38,5 @@ namespace DataAccess.DataContext
         {
             optionsBuilder.UseLazyLoadingProxies();
         }
-
-
     }
 }

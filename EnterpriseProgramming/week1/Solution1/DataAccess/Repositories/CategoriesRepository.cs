@@ -18,11 +18,8 @@ namespace DataAccess.Repositories
             _shoppingCartContext = shoppingCartContext;
         }
 
-        public IQueryable<Category> GetCategories()
-        {
+        public IQueryable<Category> GetCategories() {
             return _shoppingCartContext.Categories;
         }
-
-
     }
 }

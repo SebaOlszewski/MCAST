@@ -9,18 +9,13 @@ namespace Presentation.Controllers
     {
         private ProductsRepository _productsRepository;
         private CategoriesRepository _categoriesRepository;
-
-
-        public ProductsController(ProductsRepository productsRepository, CategoriesRepository categoriesRepository)
-        {
-            _productsRepository = productsRepository;
-            _categoriesRepository = categoriesRepository;
-        }
-
-
+        public ProductsController(ProductsRepository productsRepository, CategoriesRepository categoriesRepository) { 
+            _productsRepository= productsRepository;
+            _categoriesRepository= categoriesRepository;
+        } 
         public IActionResult Index()
         {
-            IQueryable<Product> list = _productsRepository.GetProducts().OrderBy(x => x.Name);
+          IQueryable<Product> list = _productsRepository.GetProducts().OrderBy(x=>x.Name);
 
             var output = from p in list
                          select new ListProductViewModel()
@@ -33,13 +28,13 @@ namespace Presentation.Controllers
                              Stock = p.Stock,
                              CategoryName = p.Category.Name
                          };
+          
 
-
-            return View(output);
+          return View(output);
         }
 
 
-        //part1: the method that loads the page with empty fields
+        //part 1: the method that loads the page with empty fields
         [HttpGet]
         public IActionResult Create()
         {
@@ -47,10 +42,11 @@ namespace Presentation.Controllers
             return View(myModel);
         }
 
-        //part2: the method which will receive the datat typed by the user
+        //part 2: the method which will receive the data typed by the user
         [HttpPost]
         public IActionResult Create(CreateProductViewModel myModel)
         {
+            //validation....must be done here
             try
             {
                 _productsRepository.AddProduct(new Product()
@@ -63,19 +59,50 @@ namespace Presentation.Controllers
                     Supplier = myModel.Supplier,
                     WholesalePrice = myModel.WholesalePrice
                 });
+
                 TempData["message"] = "Product saved successfully";
+
                 return RedirectToAction("Index");
 
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
-                myModel.Categories = (List<Category>)_categoriesRepository.GetCategories();
-                TempData["error"] = "Product was not inserted seccussfully";
+                myModel.Categories = _categoriesRepository.GetCategories();
+                TempData["error"] = "Product was not inserted successfully";
                 return View(myModel);
             }
+
+
             
-            return View(myModel);
         }
-        
+
+
+        public IActionResult Details(Guid id)
+        {
+            var product = _productsRepository.GetProduct(id);
+            if (product == null)
+            {
+                TempData["error"] = "Product was not found";
+                return RedirectToAction("Index");
+
+            }
+            else
+            {
+                ListProductViewModel model = new ListProductViewModel()
+                {
+                    Id = product.Id,
+                    Name = product.Name,
+                    Price = product.Price,
+                    Stock = product.Stock,
+                    Description = product.Description,
+                    CategoryName = product.Category.Name,
+                    Image = product.Image
+                };
+
+                return View(model);
+            }
+        }
+
 
     }
 }
